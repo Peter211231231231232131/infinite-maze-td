@@ -34,7 +34,6 @@ const SPRITES = {
   drill: new Image(),
   beam: new Image(),
   blast: new Image(),
-  blast: new Image(),
   zombie: new Image(),
   crystal: new Image(),
   base: new Image(),
