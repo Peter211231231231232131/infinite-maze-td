@@ -1,6 +1,19 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { getTileAt, TILE_TYPES } from '../game/MazeEngine';
 
+// Import Assets
+import coreImg from '../assets/core.png';
+import towerImg from '../assets/tower.png';
+import drillImg from '../assets/drill.png';
+import beamImg from '../assets/beam.png';
+import blastImg from '../assets/blast.png';
+import zombieImg from '../assets/zombie_walk.png';
+import crystalImg from '../assets/crystal_pure.png';
+import baseImg from '../assets/base.png';
+import headImg from '../assets/head.png';
+import supplyImg from '../assets/refiller.png';
+import factoryImg from '../assets/factory_sheet.png';
+
 const TILE_SIZE = 40;
 
 const COLORS = {
@@ -41,17 +54,18 @@ const SPRITES = {
   supply: new Image(),
   factory: new Image()
 };
-SPRITES.core.src = '/assets/core.png';
-SPRITES.tower.src = '/assets/tower.png';
-SPRITES.drill.src = '/assets/drill.png';
-SPRITES.beam.src = '/assets/beam.png';
-SPRITES.blast.src = '/assets/blast.png';
-SPRITES.zombie.src = '/assets/zombie_walk.png';
-SPRITES.crystal.src = '/assets/crystal_pure.png';
-SPRITES.base.src = '/assets/base.png';
-SPRITES.head.src = '/assets/head.png';
-SPRITES.supply.src = '/assets/refiller.png';
-SPRITES.factory.src = '/assets/factory_sheet.png';
+
+SPRITES.core.src = coreImg;
+SPRITES.tower.src = towerImg;
+SPRITES.drill.src = drillImg;
+SPRITES.beam.src = beamImg;
+SPRITES.blast.src = blastImg;
+SPRITES.zombie.src = zombieImg;
+SPRITES.crystal.src = crystalImg;
+SPRITES.base.src = baseImg;
+SPRITES.head.src = headImg;
+SPRITES.supply.src = supplyImg;
+SPRITES.factory.src = factoryImg;
 
 const GameCanvas = ({ placements, enemies, projectiles, particles, floatingTexts, camera, setCamera, onPlace, buildMode, selectedId, towerTypes }) => {
   const canvasRef = useRef(null);
